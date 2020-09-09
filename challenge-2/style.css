@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Modak&family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: rgba(150, 145, 145, 0.794);
+  background-image: url(./images/alesia-kazantceva-mobile.png);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-auto-flow: column;
+  -ms-grid-rows: 1fr 8fr;
+      grid-template-rows: 1fr 8fr;
+      grid-template-areas: 'navbar' 'main';
+}
+
+.navbar {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: navbar;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: row;
+  -ms-grid-columns: 3fr 2fr 2fr;
+      grid-template-columns: 3fr 2fr 2fr;
+      grid-template-areas: 'logo login register';
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 0.133vw solid whitesmoke;
+}
+
+.navbar__logo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: logo;
+  width: 30vw;
+  height: 7vh;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  background-color: whitesmoke;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+}
+
+.navbar__login {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: login;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: Roboto;
+  font-size: 3.5vw;
+}
+
+.navbar__register {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: register;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  color: #FF0000;
+  text-decoration: none;
+  font-family: Roboto;
+  font-size: 3.5vw;
+}
+
+main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: main;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -ms-grid-rows: 3fr 4fr;
+      grid-template-rows: 3fr 4fr;
+      grid-template-areas: 'h1' 'ul';
+}
+
+main h1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: h1;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  font-family: Modak;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11vw;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 13vh;
+}
+
+main div {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: ul;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+main div ul {
+  list-style-type: circle;
+  list-style-position: inside;
+  font-family: Roboto;
+  color: #460808;
+  background: #FFFFFF;
+  border: 0.0625rem solid #000000;
+  border-radius: 0.75rem;
+  padding: 1rem 0.5rem 1rem 1rem;
+  font-size: 5vw;
+}
+
+main div ul span {
+  position: relative;
+  left: -1rem;
+}
+
+@media only screen and (min-width: 585px) {
+  body {
+    background-image: url(./images/alesia-kazantceva-desktop.png);
+    -ms-grid-rows: 1.3fr 8fr;
+        grid-template-rows: 1.3fr 8fr;
+  }
+  .navbar {
+    -ms-grid-columns: 3.5fr 7fr 1.2fr 1.2fr;
+        grid-template-columns: 3.5fr 7fr 1.2fr 1.2fr;
+        grid-template-areas: 'logo . login register';
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbar__logo {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    width: 20vw;
+    height: 8vh;
+  }
+  .navbar__login {
+    -ms-grid-column-align: start;
+        justify-self: start;
+    font-size: 1.7vw;
+  }
+  .navbar__register {
+    -ms-grid-column-align: start;
+        justify-self: start;
+    font-size: 1.7vw;
+  }
+  main h1 {
+    font-size: 6vw;
+  }
+  main h1 span {
+    display: none;
+  }
+  main div {
+    display: -ms-grid;
+    display: grid;
+    grid-auto-flow: row;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: '. list';
+  }
+  main div ul {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: list;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    -ms-grid-column-align: start;
+        justify-self: start;
+    font-size: 2.5vw;
+  }
+}
+/*# sourceMappingURL=style.css.map */
