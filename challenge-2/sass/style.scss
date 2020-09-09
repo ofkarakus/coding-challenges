@@ -1,0 +1,58 @@
+@import "reset";
+@import "navBar";
+@import "mainBlock";
+
+
+@media only screen and (min-width:585px) {
+    body {
+        background-image: url(./images/alesia-kazantceva-desktop.png);
+        grid-template-rows: 1.3fr 8fr;
+    }
+    .navbar {
+        grid-template-columns: 3.5fr 7fr 1.2fr 1.2fr;
+        grid-template-areas: 
+        'logo . login register';
+        align-items: center;
+        
+        &__logo {
+            justify-self: center;
+            width: 20vw;
+            height: 8vh;
+        }
+        
+        &__login {
+            justify-self: start;
+            font-size: 1.7vw;
+        }
+
+        &__register {
+            justify-self: start;
+            font-size: 1.7vw;
+        }
+    }
+
+    main {
+
+        h1 {
+            font-size: 6vw;
+
+            span {
+                display: none;
+            }
+        }
+        
+        div {
+            display: grid;
+            grid-auto-flow: row;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: '. list';
+
+            ul {
+                grid-area: list;
+                align-self: start;
+                justify-self: start;
+                font-size: 2.5vw;
+            }
+        }
+    }
+}

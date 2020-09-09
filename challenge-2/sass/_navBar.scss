@@ -1,0 +1,38 @@
+.navbar {
+    grid-area: navbar;
+    display: grid;
+	grid-auto-flow: row;
+	grid-template-columns: 3fr 2fr 2fr;
+	grid-template-areas: 
+    'logo login register';
+    align-items: center;
+    border-bottom: 0.133vw solid whitesmoke;
+    
+    &__logo {
+        grid-area: logo;
+        width: 30vw;
+        height: 7vh;
+        justify-self: center;
+        background-color: whitesmoke;
+        padding: 0.3rem;
+        border-radius: 0.5rem;
+    }
+
+    &__login {
+        grid-area: login;
+        justify-self: end;
+        color: #FFFFFF;
+        text-decoration: none;
+        font-family: Roboto;
+        font-size: 3.5vw;
+    }
+    
+    &__register {
+        grid-area: register;
+        justify-self: center;
+        color: #FF0000;
+        text-decoration: none;
+        font-family: Roboto;
+        font-size: 3.5vw;
+    } 
+}

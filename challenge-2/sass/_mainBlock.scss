@@ -1,0 +1,44 @@
+main {
+    grid-area: main;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: 3fr 4fr;  grid-template-areas: 
+    'h1'
+    'ul';
+
+    h1 {
+        grid-area: h1;
+        align-self: center;
+        justify-self: center;
+        font-family: Modak;
+        font-style: normal;
+        font-weight: normal;        
+        font-size: 11vw;
+        color: #FFFFFF;
+        text-align: center;
+        line-height: 13vh;
+    }
+
+    div {
+        grid-area: ul;
+        align-self: start;
+        justify-self: center;
+
+        ul {
+            list-style-type: circle;
+            list-style-position: inside;
+            font-family: Roboto;
+            color: #460808;
+            background: #FFFFFF;
+            border: 0.0625rem solid #000000;
+            border-radius: 0.75rem;       
+            padding: 1rem 0.5rem 1rem 1rem;
+            font-size: 5vw;
+            
+            span {
+                    position: relative;
+                    left: -1rem;
+            }
+        }
+    }
+}
