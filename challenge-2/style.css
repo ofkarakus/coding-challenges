@@ -20,7 +20,7 @@ body {
   grid-auto-flow: column;
   -ms-grid-rows: 1fr 8fr;
       grid-template-rows: 1fr 8fr;
-      grid-template-areas: 'navbar' 'main';
+      grid-template-areas: 'navbar' 'main';
 }
 
 .navbar {
@@ -85,7 +85,7 @@ main {
   grid-auto-flow: column;
   -ms-grid-rows: 3fr 4fr;
       grid-template-rows: 3fr 4fr;
-      grid-template-areas: 'h1' 'ul';
+      grid-template-areas: 'h1' 'ul';
 }
 
 main h1 {
