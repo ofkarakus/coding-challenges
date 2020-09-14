@@ -1,0 +1,66 @@
+@import 'mixins';
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-areas: 
+    'headr'
+    'mainC'
+    'footr';
+    gap: 0.5rem;
+    height: 90vh;
+    width: 90vw;
+    margin: 5vh auto;
+    font-size: 1.5rem;
+    
+    header {
+        grid-area: headr;
+        @include color
+        @include perfectCenter
+    }
+
+    main {
+        grid-area: mainC;
+        display: grid;
+        grid-template-columns: 3fr 3fr 3fr 2fr;
+        grid-template-rows: 2fr 1fr;
+        grid-template-areas: 
+        'sb1 sb2 sb3 sbar'
+        'mc mc mc sbar';
+        gap: 0.5rem;
+        .smallBox1 {
+            grid-area: sb1;
+            @include color;
+            @include perfectCenter
+        }
+        .smallBox2 {
+            grid-area: sb2;
+            @include color;
+            @include perfectCenter
+        }
+        .smallBox3 {
+            grid-area: sb3;
+            @include color;
+            @include perfectCenter
+        }
+        .sidebar {
+            grid-area: sbar;
+            @include color;
+            @include perfectCenter
+        }
+        .mainContent {
+            grid-area: mc;
+            @include color;
+            @include perfectCenter
+        }
+
+    }
+
+    footer {
+        grid-area: footr;
+        @include color
+        @include perfectCenter
+    }
+}
+

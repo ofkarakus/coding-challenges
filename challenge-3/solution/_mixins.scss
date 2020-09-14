@@ -1,0 +1,11 @@
+@mixin color {
+    background-color: blue;
+    color: white;
+}
+
+@mixin perfectCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
